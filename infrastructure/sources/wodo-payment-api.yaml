@@ -1,0 +1,7 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: wodo-payment-api
+spec:
+  interval: 5m
+  url: https://github.com/wodo-platform/wodo-payment-api

@@ -1,0 +1,26 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: wodo-payment-api
+  namespace: wodo
+spec:
+  releaseName: wodo-payment-api
+  chart:
+    spec:
+      chart: wodo-payment-api
+      sourceRef:
+        kind: HelmRepository
+        name: wodo-payment-api
+        namespace: flux-system
+  interval: 5m
+  install:
+    remediation:
+      retries: 3
+  # Default values
+  # https://github.com/stefanprodan/podinfo/blob/master/charts/podinfo/values.yaml
+  values:
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+      path: "/"
