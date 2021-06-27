@@ -1,0 +1,11 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: wodo-payment-api
+  namespace: wodo
+spec:
+  values:
+    containers:
+      env:
+        - name: "DATABASE_URL"
+          value: "mysql://wodo-db:wodo123@my-sql-mysql.mysql:3306/wodo-db"
