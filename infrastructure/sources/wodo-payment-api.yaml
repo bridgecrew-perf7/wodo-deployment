@@ -3,5 +3,5 @@ kind: HelmRepository
 metadata:
   name: wodo-payment-api
 spec:
-  interval: 5m
-  url: https://github.com/wodo-platform/wodo-payment-api
+  interval: 1m
+  url: https://wodo-platform.github.io/wodo-helm-charts

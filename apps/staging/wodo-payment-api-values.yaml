@@ -3,10 +3,10 @@ kind: HelmRelease
 metadata:
   name: wodo-payment-api
   namespace: wodo
-spec:
-  test:
-    enable: false
-  values:
-    ingress:
-      hosts:
-        - wodo-payment-api.staging
+#spec:
+  #test:
+    #enable: false
+  #values:
+    #ingress:
+      #hosts:
+        #- wodo-payment-api.staging
