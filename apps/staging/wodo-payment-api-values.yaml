@@ -3,10 +3,8 @@ kind: HelmRelease
 metadata:
   name: wodo-payment-api
   namespace: wodo
-#spec:
-  #test:
-    #enable: false
-  #values:
-    #ingress:
-      #hosts:
-        #- wodo-payment-api.staging
+spec:
+  values:
+    env:
+    - name: DATABASE_URL
+      value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
