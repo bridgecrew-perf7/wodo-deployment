@@ -17,10 +17,8 @@ spec:
     remediation:
       retries: 3
   # Default values
-  # https://github.com/stefanprodan/podinfo/blob/master/charts/podinfo/values.yaml
-  #values:
-    #ingress:
-      #enabled: true
-      #annotations:
-        #kubernetes.io/ingress.class: nginx
-      #path: "/"
+  values:
+    image:
+      env:
+        - name: DATABASE_URL
+          value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
