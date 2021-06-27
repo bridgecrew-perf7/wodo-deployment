@@ -20,5 +20,5 @@ spec:
   values:
     containers:
       env:
-        - name: DATABASE_URL
+        - name: "DATABASE_URL"
           value: "mysql://wodo-db:wodo123@my-sql-mysql.mysql:3306/wodo-db"
