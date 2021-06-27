@@ -17,8 +17,8 @@ spec:
     remediation:
       retries: 3
   # Default values
-  #values:
-    #containers:
-      #env:
-        #- name: DATABASE_URL
-          #value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
+  values:
+    containers:
+      env:
+        - name: DATABASE_URL
+          value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
