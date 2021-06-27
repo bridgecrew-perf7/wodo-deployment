@@ -6,5 +6,5 @@ metadata:
 spec:
   values:
     env:
-    - name: DATABASE_URL
-      value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
+      - name: DATABASE_URL
+        value: "mysql://wodo-db:wodo123@wodo.local:30006/wodo-db"
